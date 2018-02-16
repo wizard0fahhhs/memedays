@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Meme Dayz</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+<div class="bg-video">
+	<div class="overlay"></div>
+	<div id="player"></div>
+</div>
+<h1 id="heading"></h1>
+<p id="lols"></p>
+<script>
+	var tag = document.createElement('script');
+  	tag.src = "https://www.youtube.com/iframe_api";
+	// Inserts YouTube JS code into the page.
+	var firstScriptTag = document.getElementsByTagName('script')[0];
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	
+	var player;
+
+	// onYouTubeIframeAPIReady() is called when the IFrame API is ready to go.
+	function onYouTubeIframeAPIReady() {
+	  player = new YT.Player('player', {
+		videoId: vidid, // the ID of the video (mentioned above)
+		playerVars: {
+		  autoplay: 1, // start automatically
+		  controls: 0, // don't show the controls (we can't click them anyways)
+		  modestbranding: 1, // show smaller logo
+		  loop: 1, // loop when complete
+		  playlist: vidplaylist // required for looping, matches the video ID
+		}
+	  });
+	}
+	
+	var day;
+	switch(new Date().getDay()){
+		
+		case 0:
+		document.getElementById("heading").innerHTML = "It's hangover day, relax.";
+		var vidid = 'a3cirl_Rngk';
+		var vidplaylist = 'a3cirl_Rngk';
+		break;
+		case 1:
+		document.getElementById("heading").innerHTML = "We all hate Mondays, we get it.";
+		var vidid = 'T7WuGv3ljDA';
+		var vidplaylist = 'T7WuGv3ljDA';
+		break;
+		case 2:
+		document.getElementById("heading").innerHTML = "This will help get you through the week!";
+		var vidid = 'TsbGuY86MBo';
+		var vidplaylist = 'TsbGuY86MBo';
+		break;
+		case 3:
+		document.getElementById("heading").innerHTML = "It is Wednesdaaaaay my duuudes";
+		var vidid = 'du-TY1GUFGk';
+		var vidplaylist = 'du-TY1GUFGk';
+		break;
+		case 4:
+		document.getElementById("heading").innerHTML = "You're nearly there!";
+		var vidid = 'l6cG6SkZylA';
+		var vidplaylist = 'l6cG6SkZylA';
+		break;
+		case 5:
+		document.getElementById("heading").innerHTML = "It's Friday, yaasssssssss!";
+		var vidid = 'TeHYRTc-j2I';
+		var vidplaylist = 'TeHYRTc-j2I';
+		break;
+		case 6:
+		document.getElementById("heading").innerHTML = "It's Saturday, shouldn't you be outside?";
+		document.getElementById("demo").innerHTML = "lols";
+		var vidid = 'K5le9sYdYkM';
+		var vidplaylist = 'K5le9sYdYkM';
+		break;
+	};
+	
+	</script>
+</body>
+</html>
