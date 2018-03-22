@@ -9,8 +9,8 @@ var day;
 		break;
 		case 1:
 		document.getElementById("heading").innerHTML = "We all hate Mondays, we get it.";
-		var vidid = 'T7WuGv3ljDA';
-		var vidplaylist = 'T7WuGv3ljDA';
+		var vidid = 'K5le9sYdYkM';
+		var vidplaylist = 'K5le9sYdYkM';
 		break;
 		case 2:
 		document.getElementById("heading").innerHTML = "This will help get you through the week!";
@@ -34,7 +34,7 @@ var day;
 		break;
 		case 6:
 		document.getElementById("heading").innerHTML = "It's Saturday, shouldn't you be outside?";
-		document.getElementById("demo").innerHTML = "lols";
+		document.getElementById("lols").innerHTML = "lols";
 		var vidid = 'K5le9sYdYkM';
 		var vidplaylist = 'K5le9sYdYkM';
 		break;
